@@ -1,2 +1,2 @@
 # SalesSystem
-A simple sales system for a store
+A simple sales system for a store my parents run...
