@@ -4,6 +4,8 @@
  */
 package jFrameViews;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author David
@@ -47,6 +49,11 @@ public class login extends javax.swing.JFrame {
 
         buttonLogin.setText("Log in");
         buttonLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        buttonLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonLoginActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -101,6 +108,31 @@ public class login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLoginActionPerformed
+        // TODO add your handling code here:
+        // Button with the function to log in to system
+        
+        // Local variables for the button
+        // Taking the password for the password box and making it to a string
+        char password[] = pssPassword.getPassword();
+        String systemPassword = new String(password);
+        
+        // Main function of the button
+        if(txtUsername.getText().equals("") && systemPassword.equals("")){
+            // Close out the pane
+            this.dispose();
+            
+            // Welcome message
+            JOptionPane.showMessageDialog(null, "Welcome to our Sales System", "Welcome Message", JOptionPane.INFORMATION_MESSAGE);
+            
+            // Opens main page
+        }
+        else{
+            // Error message
+            JOptionPane.showMessageDialog(null, "The Username and/or password are incorrect", "Log in error message", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_buttonLoginActionPerformed
 
     /**
      * @param args the command line arguments
