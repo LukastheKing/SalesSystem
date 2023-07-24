@@ -4,6 +4,8 @@
  */
 package salessystem;
 
+import jFrameViews.login;
+
 /**
  *
  * @author David
@@ -15,7 +17,8 @@ public class SalesSystem {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hello world");
+        login log = new login();
+        log.setVisible(true);
     }
     
 }
