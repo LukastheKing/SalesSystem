@@ -134,6 +134,10 @@ public class login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Welcome to our Sales System", "Welcome Message", JOptionPane.INFORMATION_MESSAGE);
             
             // Opens main page
+            mainPage mP = new mainPage();
+            mP.setExtendedState(JFrame.MAXIMIZED_BOTH);
+            mP.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            mP.setVisible(true);
         }
         else{
             // Error message
